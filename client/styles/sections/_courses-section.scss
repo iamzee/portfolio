@@ -1,0 +1,21 @@
+.courses-section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+
+  &__title {
+    font-size: 4rem;
+    font-family: 'Special Elite', cursive;
+  }
+}
+
+.course-list {
+  margin-top: 5rem;
+}
+
+.course-item {
+  font-size: 2.4rem;
+  padding-top: 2rem;
+  font-weight: 300;
+}

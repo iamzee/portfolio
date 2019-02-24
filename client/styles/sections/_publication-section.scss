@@ -1,0 +1,80 @@
+.publication-section {
+  padding: 10rem 0 10rem 0;
+  text-align: center;
+
+  &__title {
+    font-size: 4rem;
+    font-family: 'Special Elite', cursive;
+    margin-bottom: 2rem;
+  }
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 40rem;
+
+  &__text {
+    font-size: 2.4rem;
+    padding: 2rem;
+  }
+
+  &__side {
+    background-color: orangered;
+    height: 40rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+
+    &--front {
+      &-1 {
+        background-image: url('/images/book1.jpg');
+      }
+
+      &-2 {
+        background-image: url('/images/book2.png');
+        background-size: cover;
+      }
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
+
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    padding: 15px 40px;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    transition: all 0.4s ease;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &:active {
+    transform: translateY(-1px);
+  }
+}

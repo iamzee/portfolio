@@ -1,0 +1,47 @@
+.contact-section {
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  &__title {
+    font-size: 4rem;
+    font-family: 'Special Elite', cursive;
+    margin-bottom: 2rem;
+  }
+}
+
+.form {
+  max-width: 60rem;
+  margin: auto;
+
+  @media screen and (max-width: 700px) {
+    max-width: 33rem;
+    margin: auto;
+  }
+
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
+    padding: 1.6rem 2rem;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    width: 100%;
+    border-bottom: 3px solid transparent;
+    display: block;
+
+    @media screen and (max-width: 700px) {
+      width: 90%;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid rgba(0, 0, 0, 0.7);
+    }
+  }
+}

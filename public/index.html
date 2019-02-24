@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      charset="UTF-8"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Special+Elite"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/fonts/styles.css" />
+    <link rel="stylesheet" href="/css/simple-grid.min.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/javascript" src="/client.bundle.js"></script>
+    <script>
+      var color_array = ['PRGn', 'GnBu', 'Blues', 'Purples', 'YlOrRd'];
+
+      var pattern = Trianglify({
+        height: window.innerHeight,
+        width: window.innerWidth,
+        cell_size: 80,
+        x_colors: 'PRGn',
+      });
+
+      document.body.append(pattern.canvas());
+
+      const canvas = document.getElementsByTagName('canvas');
+      canvas[0].className += 'canvas';
+
+      const colSchemaEl = document.querySelectorAll('.col-schema');
+      for (var i = 0; i < colSchemaEl.length; i++) {
+        colSchemaEl[i].style.color = '#a89496';
+      }
+      const navBackgroundEl = document.getElementById('navigation-background');
+      navBackgroundEl.style.backgroundColor = 'rgba(168, 148, 150, 0.7)';
+      const gradeCardHeaderEl = document.querySelectorAll('.col-schema--back');
+      for (var i = 0; i < gradeCardHeaderEl.length; i++) {
+        gradeCardHeaderEl[i].style.backgroundColor = 'rgba(168, 148, 150, 0.7)';
+      }
+
+      setInterval(() => {
+        var randomNum = Math.floor(Math.random() * 5);
+        var randomCol = color_array[randomNum];
+
+        var newPattern = Trianglify({
+          height: window.innerHeight,
+          width: window.innerWidth,
+          cell_size: 80,
+          x_colors: randomCol,
+        });
+
+        var canvas1 = document.getElementsByClassName('canvas');
+        var canvas2 = newPattern.canvas();
+
+        document.body.replaceChild(canvas2, canvas[0]);
+        const newCanvas = document.getElementsByTagName('canvas');
+        newCanvas[0].className += 'canvas';
+
+        const colSchemaEl = document.querySelectorAll('.col-schema');
+        for (var i = 0; i < colSchemaEl.length; i++) {
+          if (randomCol === 'PRGn') {
+            colSchemaEl[i].style.color = '#a89496';
+            navBackgroundEl.style.backgroundColor = 'rgba(168, 148, 150, 0.7)';
+          } else if (randomCol === 'GnBu') {
+            colSchemaEl[i].style.color = '#70b197';
+            navBackgroundEl.style.backgroundColor = 'rgba(112, 177, 151, 0.7)';
+          } else if (randomCol === 'Blues') {
+            colSchemaEl[i].style.color = '#73a3b3';
+            navBackgroundEl.style.backgroundColor = 'rgba(115, 163, 179, 0.7)';
+          } else if (randomCol === 'Purples') {
+            colSchemaEl[i].style.color = '#968ab4';
+            navBackgroundEl.style.backgroundColor = 'rgba(150, 138, 180, 0.7)';
+          } else if (randomCol === 'YlOrRd') {
+            colSchemaEl[i].style.color = '#de865a';
+            navBackgroundEl.style.backgroundColor = 'rgba(222, 134, 90, 0.7)';
+          }
+        }
+
+        const gradeCardHeaderEl = document.querySelectorAll(
+          '.col-schema--back'
+        );
+        for (var i = 0; i < gradeCardHeaderEl.length; i++) {
+          if (randomCol === 'PRGn') {
+            gradeCardHeaderEl[i].style.backgroundColor =
+              'rgba(168, 148, 150, 0.7)';
+          } else if (randomCol === 'GnBu') {
+            gradeCardHeaderEl[i].style.backgroundColor =
+              'rgba(112, 177, 151, 0.7)';
+          } else if (randomCol === 'Blues') {
+            gradeCardHeaderEl[i].style.backgroundColor =
+              'rgba(115, 163, 179, 0.7)';
+          } else if (randomCol === 'Purples') {
+            gradeCardHeaderEl[i].style.backgroundColor =
+              'rgba(150, 138, 180, 0.7)';
+          } else if (randomCol === 'YlOrRd') {
+            gradeCardHeaderEl[i].style.backgroundColor =
+              'rgba(222, 134, 90, 0.7)';
+          }
+        }
+
+        const profilePhotoBorderEl = document.getElementById(
+          'profile-photo-border'
+        );
+        if (randomCol === 'PRGn') {
+          profilePhotoBorderEl.style.borderColor = 'rgba(168, 148, 150)';
+        } else if (randomCol === 'GnBu') {
+          profilePhotoBorderEl.style.borderColor = 'rgba(112, 177, 151)';
+        } else if (randomCol === 'Blues') {
+          profilePhotoBorderEl.style.borderColor = 'rgba(115, 163, 179)';
+        } else if (randomCol === 'Purples') {
+          profilePhotoBorderEl.style.borderColor = 'rgba(150, 138, 180)';
+        } else if (randomCol === 'YlOrRd') {
+          profilePhotoBorderEl.style.borderColor = 'rgba(222, 134, 90)';
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>

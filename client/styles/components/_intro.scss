@@ -1,0 +1,21 @@
+.intro {
+  width: 60rem;
+  height: 10rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  vertical-align: center;
+  &__text {
+    font-size: 6rem;
+    padding-top: 1rem;
+    font-family: 'Special Elite', cursive;
+
+    @media screen and (max-width: 700px) {
+      font-size: 3.2rem;
+      padding-top: 2.6rem;
+    }
+  }
+}
