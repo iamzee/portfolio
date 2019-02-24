@@ -21,6 +21,7 @@ const ContactSection = () => (
           rows="5"
         />
       </div>
+      <a href="#" className="btn" style={{marginTop: '2rem'}}>Submit</a>
     </form>
   </div>
 );

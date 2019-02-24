@@ -34,7 +34,7 @@
     //   rgba(255, 255, 255, 0.3)
     // );
 
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     z-index: 1000;
 
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -84,7 +84,7 @@
   &__link:visited {
     display: inline-block;
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 400;
     color: black;
     text-decoration: none;
     text-transform: uppercase;
@@ -93,7 +93,7 @@
       120deg,
       transparent 0%,
       transparent 50%,
-      white 50%
+      black 50%
     );
     background-size: 225%;
     transition: all 0.4s;
@@ -103,7 +103,7 @@
   &__link:active {
     background-position: 100%;
     font-weight: bold;
-    color: black;
+    color: white;
     transform: translateX(1rem);
   }
 

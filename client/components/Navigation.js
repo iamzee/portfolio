@@ -7,7 +7,7 @@ const Navigation = () => (
       <span className="navigation__icon">&nbsp;</span>
     </label>
 
-    <div className="navigation__background" id="navigation-background" />
+    <div className="navigation__background" />
 
     <nav className="navigation__nav">
       <ul className="navigation__list">
