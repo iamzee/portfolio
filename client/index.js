@@ -10,6 +10,7 @@ import AcademicSection from './sections/AcademicSection';
 import CoursesSection from './sections/CoursesSection';
 import PublicationSection from './sections/PublicationSection';
 import ContactSection from './sections/ContactSection';
+import QuoteSection from './sections/QuoteSection';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
     <CoursesSection />
     <PublicationSection />
     <ContactSection />
+    <QuoteSection />
   </div>
 );
 
