@@ -6,7 +6,9 @@
   "scripts": {
     "build:dev": "webpack --config webpack.client.config.js --watch",
     "dev": "nodemon server/index.js",
-    "build:prod": "webpack --config webpack.client.config.js -p --env production"
+    "build:prod": "webpack --config webpack.client.config.js -p --env production",
+    "start": "node server/index.js",
+    "heroku-postbuild": "npm run build:prod"
   },
   "author": "",
   "license": "ISC",

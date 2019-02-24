@@ -2,12 +2,14 @@ const express = require ('express');
 
 const app = express ();
 
+const port = process.env.PORT || 300;
+
 app.use (express.static ('public'));
 
-app.get ('/', (req, res) => {
+app.get ('*', (req, res) => {
   res.sendFile (path.resolve (__dirname, 'public', 'index.html'));
 });
 
-app.listen (3000, () => {
-  console.log ('Server started on port 3000');
+app.listen (port, () => {
+  console.log (`Server started on port ${port}`);
 });
