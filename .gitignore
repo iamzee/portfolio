@@ -1,1 +1,5 @@
 node_modules
+public/client.bundle.js
+public/client.bundle.js.map
+public/styles.css
+public/styles.css.map
